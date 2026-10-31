@@ -528,10 +528,10 @@ def build_paper_docx(filename, figures_dir, tables_dir):
     add_h2("3.5. Statistical Power and Singular Fit Audit")
     doc.add_paragraph(
         "Table 5 summarizes statistical power under the alternative hypothesis β_1 = 0.50. For within-subject time predictors, all three methods achieved "
-        "saturated 100% empirical power across all sample sizes (99.6%–100.0% at J = 10, and 100.0% at J ≥ 30). Because the design provided 10J time "
-        "observations per scenario, an effect size of β_1 = 0.50 saturated the power function, masking the asymptotic efficiency penalty of naive OLS. "
-        "Demonstrating empirical power loss for naive OLS on within-subject factors requires smaller effect sizes (e.g., β_1 ≤ 0.15), where the wider OLS "
-        "confidence intervals directly diminish detection sensitivity.\n\n"
+        "saturated 100% empirical power across all sample sizes (99.6%–100.0% at J = 10, and 100.0% at J ≥ 30). Because each scenario provided N = 5J "
+        "observations with ∑ t_k² = 10 (yielding a denominator sum of squares ∑ ∑ t_k² = 10J), an effect size of β_1 = 0.50 saturated the power function, "
+        "masking the asymptotic efficiency penalty of naive OLS. Demonstrating empirical power loss for naive OLS on within-subject factors requires smaller "
+        "effect sizes (e.g., β_1 ≤ 0.15), where the wider OLS confidence intervals directly diminish detection sensitivity.\n\n"
         "For between-subject covariates, naive OLS appeared to exhibit higher power (e.g., 49.55% at J = 10, ICC = 0.50), but this is an uninterpretable "
         "artifact of its 28.0% false-positive rate. Properly calibrated power (achieved by LMM and CR2) under strong clustering (ICC = 0.50) was 15.30% "
         "at J = 10, increasing to 40.20% at J = 30, and reaching 89.65% at J = 100. Under weak clustering (ICC = 0.10), properly calibrated power was "
@@ -557,8 +557,11 @@ def build_paper_docx(filename, figures_dir, tables_dir):
         "absent, occurring in only 0.65% (between) and 0.20% (within) of replications at J = 10, and 0.00% across all scenarios with J ≥ 30.\n\n"
         "Conditioning coverage on singular status reveals a fundamental structural contrast:\n"
         "• For between-subject predictors, when REML encounters a singular boundary fit, the estimated random-intercept variance collapses to zero, "
-        "and the model mistakenly relies on residual within-subject variance. Consequently, LMM coverage among singular fits drops to 91.6% at J = 10 and "
-        "87.7% at J = 30 (compared to 97.4% and 95.3% for non-singular fits).\n"
+        "and the model mistakenly relies on residual within-subject variance. Consequently, LMM coverage among singular fits drops to 91.6% at J = 10, ICC = 0.10 and "
+        "87.7% at J = 30, ICC = 0.10 (compared to 97.4% and 95.3% for non-singular fits). At J = 10, ICC = 0.50, singular fits were exceptionally rare "
+        "(13 out of 2,000 replications, or 0.65%); coverage among these 13 singular cases was 69.2% (9/13), which illustrates severe variance collapse but carries "
+        "substantial Monte Carlo imprecision due to the small count (n = 13). Because singular solutions occurred in less than 1% of replications in this cell, "
+        "overall coverage remained well-calibrated at 95.2%.\n"
         "• For within-subject predictors, because the within-subject contrast is mathematically orthogonal to the random intercept, singular fits have "
         "no adverse effect on fixed-effect coverage: LMM coverage remained 96.1% at J = 10 and 96.8% at J = 30 among singular fits."
     )
@@ -581,9 +584,10 @@ def build_paper_docx(filename, figures_dir, tables_dir):
     add_h1("4. Empirical Benchmark: The Sleep Deprivation Case Study")
     doc.add_paragraph(
         "To examine how these theoretical and simulation dynamics function in real-world biomedical data, we re-analyzed the canonical sleep deprivation "
-        "experiment conducted by Belenky et al. (2003) and benchmarked by Bates et al. (2015). The experimental protocol comprised 2 baseline adaptation "
-        "and training days (Days 0–1) followed by 8 consecutive days of sleep restriction to 3 hours in bed per night (Days 2–9), providing 10 consecutive "
-        "observation days (K = 10) across J = 18 subjects (N = 180 total measurements).\n\n"
+        "experiment conducted by Belenky et al. (2003) and benchmarked by Bates et al. (2015). The dataset tracks average reaction times (ms) on a "
+        "psychomotor vigilance task across N = 180 measurements obtained from J = 18 subjects across 10 consecutive observation days (Days 0 to 9, where K = 10). "
+        "In the standard lme4 benchmarking protocol (Bates et al., 2015; Belenky et al., 2003), Day 0 represents baseline performance under normal sleep, "
+        "with sleep restriction (restricted to 3 hours time-in-bed per night) commencing that night and continuing through Day 9.\n\n"
         "We fitted four competing specifications modeling reaction time as a linear function of sleep restriction days:\n"
         "1. Naive OLS Pooling: Regressing reaction time on days without clustering adjustments (df = 178).\n"
         "2. Cluster-Robust CR2: OLS point estimation with small-sample bias-reduced standard errors clustered by subject (df = 17).\n"
@@ -690,7 +694,7 @@ def build_paper_docx(filename, figures_dir, tables_dir):
         "Barr, D. J., Levy, R., Scheepers, C., & Tily, H. J. (2013). Random effects structure for confirmatory hypothesis testing: Keep it maximal. Journal of Memory and Language, 68(3), 255–278. https://doi.org/10.1016/j.jml.2012.11.001",
         "Bates, D., Mächler, M., Bolker, B., & Walker, S. (2015). Fitting linear mixed-effects models using lme4. Journal of Statistical Software, 67(1), 1–48. https://doi.org/10.18637/jss.v067.i01",
         "Belenky, G., Wesensten, N. J., Thorne, D. R., Thomas, M. L., Sing, H. C., Redmond, D. P., Russo, M. B., & Balkin, T. J. (2003). Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: A sleep dose-response study. Journal of Sleep Research, 12(1), 1–12. https://doi.org/10.1046/j.1365-2869.2003.00337.x",
-        "Bell, R. M., & McCaffrey, D. F. (2002). Bias reduction in standard errors for linear regression with multi-stage samples. Survey Methodology, 28(2), 169–181. https://www.statcan.gc.ca/en/statistical-methods/survey-methodology",
+        "Bell, R. M., & McCaffrey, D. F. (2002). Bias reduction in standard errors for linear regression with multi-stage samples. Survey Methodology, 28(2), 169–181. https://www150.statcan.gc.ca/n1/pub/12-001-x/2002002/article/9058-eng.pdf",
         "Bradley, J. V. (1978). Robustness? British Journal of Mathematical and Statistical Psychology, 31(2), 144–152. https://doi.org/10.1111/j.2044-8317.1978.tb00581.x",
         "Cameron, A. C., & Miller, D. L. (2015). A practitioner's guide to cluster-robust inference. Journal of Human Resources, 50(2), 317–372. https://doi.org/10.3368/jhr.50.2.317",
         "Diggle, P. J., Heagerty, P., Liang, K.-Y., & Zeger, S. L. (2002). Analysis of Longitudinal Data (2nd ed.). Oxford University Press. https://doi.org/10.1093/oso/9780198524847.001.0001",

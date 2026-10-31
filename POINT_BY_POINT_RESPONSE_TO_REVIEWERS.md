@@ -158,4 +158,45 @@ Table 2 was reformatted with dedicated columns for Empirical SD, Naive OLS (SE |
 
 ---
 
+### Part V: Follow-Up Refinements and Protocol Verifications
+
+#### Comment 13 (Observation Count vs. Sum of Squares Wording in Section 3.5):
+> *"Section 3.5 says '10J time observations'. With K = 5 you have 5J observations. It is the sum of squared time values that equals 10J. Fix the wording."*
+
+**Author Response:**
+Thank you for catching this typographical conflation. In balanced designs with $K = 5$ occasions, the total observation count is indeed $N = J \times K = 5J$, whereas the sum of squared occasion values is $\sum_{k=1}^5 t_k^2 = 10$, giving a denominator sum of squares $\sum_{j=1}^J \sum_{k=1}^5 t_k^2 = 10J$. The wording has been corrected in both the manuscript and the Word document to:
+*"Because each scenario provided $N = 5J$ observations with $\sum_{k=1}^5 t_k^2 = 10$ (yielding a denominator sum of squares $\sum_{j=1}^J \sum_{k=1}^5 t_k^2 = 10J$), an effect size of $\beta_1 = 0.50$ saturated the power function, masking the asymptotic efficiency penalty of naive OLS."*
+
+---
+
+#### Comment 14 (Sleepstudy Protocol Precision in Section 4):
+> *"Sleepstudy description (Section 4). You now say 2 baseline days then 8 restriction days. As I recall, the lme4 documentation says Day 0 was normal sleep and restriction started that night. Check this against the lme4 help page and Belenky et al. before you submit."*
+
+**Author Response:**
+We verified the `lme4` documentation (`?sleepstudy` and Bates et al., 2015, *JSS* Section 1.1) and Belenky et al. (2003). The canonical `lme4` dataset indexes observation days as `Days = 0, ..., 9` ($K = 10$ total observation days). As stated on the `lme4` help page:
+*"On day 0 the subjects had their normal amount of sleep. Starting that night they were restricted to 3 hours of sleep per night. The observations Days = 0, ..., 9 are recorded."*
+The text in Section 4 has been updated to state this with exact fidelity:
+*"The dataset tracks average reaction times (ms) on a psychomotor vigilance task across $N = 180$ measurements obtained from $J = 18$ subjects across 10 consecutive observation days (Days 0 to 9, where $K = 10$). In the standard `lme4` benchmarking protocol (Bates et al., 2015; Belenky et al., 2003), Day 0 represents baseline performance under normal sleep, with sleep restriction (restricted to 3 hours time-in-bed per night) commencing that night and continuing through Day 9."*
+
+---
+
+#### Comment 15 (Table 5b: J = 10, ICC = 0.50 Between-Subject Singular Coverage):
+> *"Table 5b. Between-subject, J = 10, ICC = 0.50 shows 69.2% coverage among singular fits, from only 13 cases. It isn’t discussed in the text. Mention it or note the small count."*
+
+**Author Response:**
+This has been explicitly added to the narrative in Section 3.5:
+*"At $J = 10, \text{ICC} = 0.50$, singular fits were exceptionally rare (13 out of 2,000 replications, or $0.65\%$). Coverage among these 13 singular cases was $69.2\%$ ($9/13$), which illustrates severe variance collapse when boundary fits occur in small between-subject designs, but carries substantial Monte Carlo imprecision due to the small effective sample size ($n = 13$, where each case represents $\approx 7.7\%$). Because singular solutions occurred in less than $1\%$ of replications in this condition, overall LMM coverage remained well-calibrated at $95.15\%$."*
+
+---
+
+#### Comment 16 (Direct Article Link for Bell & McCaffrey, 2002):
+> *"Bell & McCaffrey reference. The link is still the journal homepage, not an article link."*
+
+**Author Response:**
+We replaced the general journal homepage URL with the permanent, direct article PDF link from Statistics Canada:
+**`https://www150.statcan.gc.ca/n1/pub/12-001-x/2002002/article/9058-eng.pdf`**
+This link was verified via automated HTTP requests and returns status `200 OK`.
+
+---
+
 We believe these comprehensive revisions have fully resolved every methodological, empirical, and stylistic concern raised, elevating the manuscript to the highest standards of Elsevier statistical journals.
