@@ -1,0 +1,5 @@
+Model_Specification,Estimate_beta1,Std_Error,df,p_value,CI_95_Lower,CI_95_Upper
+1. Naive OLS (complete pooling),10.467,1.238,178,< 0.001,8.024,12.911
+2. Cluster-robust OLS (CR2),10.467,1.546,17,< 0.001,7.206,13.729
+3. LMM (random intercept only),10.467,0.804,161,< 0.001,8.879,12.055
+4. LMM (random slope & intercept),10.467,1.546,17,< 0.001,7.206,13.729
