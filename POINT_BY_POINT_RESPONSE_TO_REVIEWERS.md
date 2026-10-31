@@ -1,8 +1,10 @@
 # Detailed Point-by-Point Response to Reviewer Critique
 
 **Manuscript Title:** Statistical Analysis of Repeated Measures Data: A Simulation Study Comparing Ordinary Least Squares, Linear Mixed-Effects, and Cluster-Robust Estimators  
-**Author:** Isaac T. Adeyemi  
-**Affiliation:** Department of Pure and Applied Mathematics / Statistics, Ladoke Akintola University of Technology (LAUTECH), P.M.B. 4000, Ogbomoso, Oyo State, Nigeria  
+**Authors:** Adeyemi I. T.$^1$, Bamidele D. E.$^2$, Adisa Z. O.$^3$, Ademola O. R.$^4$  
+**Affiliations:**  
+- $^1,^2$ Department of Pure and Applied Mathematics, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria  
+- $^3,^4$ Department of Science Laboratory Technology, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria  
 **Corresponding Email:** isaacadeyemi245@gmail.com  
 **Target Repository:** [https://github.com/IsaacMoon1/repeated-measures-simulation](https://github.com/IsaacMoon1/repeated-measures-simulation)
 

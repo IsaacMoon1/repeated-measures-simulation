@@ -84,23 +84,71 @@ def build_paper_docx(filename, figures_dir, tables_dir):
     r_title.font.bold = True
     r_title.font.color.rgb = RGBColor(0x0A, 0x25, 0x40) # Midnight Navy
 
-    # Author
+    # Authors
     p_author = doc.add_paragraph()
     p_author.paragraph_format.space_after = Pt(2)
-    r_author = p_author.add_run("Isaac T. Adeyemi")
-    r_author.font.bold = True
-    r_author.font.size = Pt(12)
+    
+    r1 = p_author.add_run("Adeyemi I. T.")
+    r1.font.bold = True
+    r1.font.size = Pt(11.5)
+    s1 = p_author.add_run("1")
+    s1.font.superscript = True
+    s1.font.bold = True
+    s1.font.size = Pt(8.5)
+    
+    c1 = p_author.add_run(", ")
+    
+    r2 = p_author.add_run("Bamidele D. E.")
+    r2.font.bold = True
+    r2.font.size = Pt(11.5)
+    s2 = p_author.add_run("2")
+    s2.font.superscript = True
+    s2.font.bold = True
+    s2.font.size = Pt(8.5)
+    
+    c2 = p_author.add_run(", ")
+    
+    r3 = p_author.add_run("Adisa Z. O.")
+    r3.font.bold = True
+    r3.font.size = Pt(11.5)
+    s3 = p_author.add_run("3")
+    s3.font.superscript = True
+    s3.font.bold = True
+    s3.font.size = Pt(8.5)
+    
+    c3 = p_author.add_run(", ")
+    
+    r4 = p_author.add_run("Ademola O. R.")
+    r4.font.bold = True
+    r4.font.size = Pt(11.5)
+    s4 = p_author.add_run("4")
+    s4.font.superscript = True
+    s4.font.bold = True
+    s4.font.size = Pt(8.5)
 
-    p_aff = doc.add_paragraph()
-    p_aff.paragraph_format.space_after = Pt(2)
-    r_aff = p_aff.add_run("Department of Pure and Applied Mathematics / Statistics\nLadoke Akintola University of Technology (LAUTECH), P.M.B. 4000, Ogbomoso, Oyo State, Nigeria")
-    r_aff.font.size = Pt(10)
-    r_aff.font.italic = True
-    r_aff.font.color.rgb = RGBColor(0x4A, 0x55, 0x68)
+    p_aff1 = doc.add_paragraph()
+    p_aff1.paragraph_format.space_after = Pt(1)
+    s_a1 = p_aff1.add_run("1,2 ")
+    s_a1.font.superscript = True
+    s_a1.font.size = Pt(8)
+    r_aff1 = p_aff1.add_run("Department of Pure and Applied Mathematics, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria")
+    r_aff1.font.size = Pt(9.5)
+    r_aff1.font.italic = True
+    r_aff1.font.color.rgb = RGBColor(0x4A, 0x55, 0x68)
+
+    p_aff2 = doc.add_paragraph()
+    p_aff2.paragraph_format.space_after = Pt(2)
+    s_a2 = p_aff2.add_run("3,4 ")
+    s_a2.font.superscript = True
+    s_a2.font.size = Pt(8)
+    r_aff2 = p_aff2.add_run("Department of Science Laboratory Technology, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria")
+    r_aff2.font.size = Pt(9.5)
+    r_aff2.font.italic = True
+    r_aff2.font.color.rgb = RGBColor(0x4A, 0x55, 0x68)
 
     p_email = doc.add_paragraph()
     p_email.paragraph_format.space_after = Pt(14)
-    r_email = p_email.add_run("Corresponding Author: isaacadeyemi245@gmail.com")
+    r_email = p_email.add_run("Corresponding Author Email: isaacadeyemi245@gmail.com")
     r_email.font.size = Pt(9.5)
     r_email.font.color.rgb = RGBColor(0x00, 0x66, 0xCC)
 
@@ -682,10 +730,13 @@ def build_paper_docx(filename, figures_dir, tables_dir):
     add_h1("Declarations")
     doc.add_paragraph(
         "• Funding: This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.\n"
-        "• Conflicts of Interest / Competing Interests: The author declares no conflicts of interest.\n"
+        "• Conflicts of Interest / Competing Interests: The authors declare no conflicts of interest.\n"
         "• Data and Code Availability: Complete reproducible R and Python code pipelines, simulation routines, and benchmark dataset analysis scripts are "
         "openly accessible on GitHub: https://github.com/IsaacMoon1/repeated-measures-simulation.\n"
-        "• Author Contributions: I.T.A. conceived the study, developed the methodology, executed the Monte Carlo simulations, analyzed the empirical benchmark data, and authored the manuscript."
+        "• Author Contributions: I.T.A. conceived the study, developed the methodology, designed the simulation framework, and drafted the manuscript. "
+        "D.E.B. and Z.O.A. assisted with formal analysis, simulation validation, and statistical programming. "
+        "O.R.A. contributed to computational data curation, literature synthesis, and critical review and editing of the manuscript. "
+        "All authors reviewed and approved the final manuscript."
     )
 
     # References

@@ -1,9 +1,10 @@
 # Statistical Analysis of Repeated Measures Data: A Simulation Study Comparing Ordinary Least Squares, Linear Mixed-Effects, and Cluster-Robust Estimators
 
-**Isaac T. Adeyemi**  
-*Department of Pure and Applied Mathematics / Statistics*  
-*Ladoke Akintola University of Technology (LAUTECH), P.M.B. 4000, Ogbomoso, Oyo State, Nigeria*  
-**Corresponding Author:** [isaacadeyemi245@gmail.com](mailto:isaacadeyemi245@gmail.com)
+**Adeyemi I. T.$^1$, Bamidele D. E.$^2$, Adisa Z. O.$^3$, Ademola O. R.$^4$**
+
+$^1,^2$ *Department of Pure and Applied Mathematics, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria*  
+$^3,^4$ *Department of Science Laboratory Technology, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria*  
+**Corresponding Author Email:** [isaacadeyemi245@gmail.com](mailto:isaacadeyemi245@gmail.com)
 
 ---
 
@@ -331,9 +332,9 @@ When cluster counts are small ($J < 30$), applied researchers must adopt either 
 
 ## Declarations
 - **Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
-- **Conflicts of Interest / Competing Interests:** The author declares no conflicts of interest.
+- **Conflicts of Interest / Competing Interests:** The authors declare no conflicts of interest.
 - **Data and Code Availability:** Complete reproducible R and Python code pipelines, simulation routines, and benchmark dataset analysis scripts are openly accessible on GitHub: [https://github.com/IsaacMoon1/repeated-measures-simulation](https://github.com/IsaacMoon1/repeated-measures-simulation).
-- **Author Contributions:** I.T.A. conceived the study, developed the methodology, executed the Monte Carlo simulations, analyzed the empirical benchmark data, and authored the manuscript.
+- **Author Contributions:** I.T.A. conceived the study, developed the methodology, designed the simulation framework, and drafted the manuscript. D.E.B. and Z.O.A. assisted with formal analysis, simulation validation, and statistical programming. O.R.A. contributed to computational data curation, literature synthesis, and critical review and editing of the manuscript. All authors reviewed and approved the final manuscript.
 
 ---
 

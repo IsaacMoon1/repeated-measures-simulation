@@ -5,16 +5,18 @@
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![ADEMP: Morris et al. (2019)](https://img.shields.io/badge/Simulation-ADEMP%20Standard-success.svg)](https://doi.org/10.1002/sim.8086)
 
-**Author:** Isaac T. Adeyemi  
-**Affiliation:** Department of Pure and Applied Mathematics / Statistics, Ladoke Akintola University of Technology (LAUTECH), P.M.B. 4000, Ogbomoso, Oyo State, Nigeria  
-**Corresponding Email:** [isaacadeyemi245@gmail.com](mailto:isaacadeyemi245@gmail.com)
+**Authors:** Adeyemi I. T.$^1$, Bamidele D. E.$^2$, Adisa Z. O.$^3$, Ademola O. R.$^4$  
+**Affiliations:**  
+- $^1,^2$ Department of Pure and Applied Mathematics, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria  
+- $^3,^4$ Department of Science Laboratory Technology, Ladoke Akintola University of Technology, P.M.B. 4000, Ogbomoso, Oyo State, Nigeria  
+**Corresponding Author Email:** [isaacadeyemi245@gmail.com](mailto:isaacadeyemi245@gmail.com)
 
 ---
 
 ## Overview
 This repository contains the complete reproducible simulation routines, publication figures, CSV result tables, and manuscript source files for the methodological paper:
 
-> **Adeyemi, I. T. (2026). Statistical Analysis of Repeated Measures Data: A Simulation Study Comparing Ordinary Least Squares, Linear Mixed-Effects, and Cluster-Robust Estimators.**
+> **Adeyemi, I. T., Bamidele, D. E., Adisa, Z. O., & Ademola, O. R. (2026). Statistical Analysis of Repeated Measures Data: A Simulation Study Comparing Ordinary Least Squares, Linear Mixed-Effects, and Cluster-Robust Estimators.**
 
 The study examines the inferential consequences of ignoring repeated measures clustering across varying sample sizes and correlation strengths. Following the **ADEMP** protocol (Morris et al., 2019), we conduct a full-factorial Monte Carlo simulation crossing:
 - Cluster counts ($J \in \{10, 30, 100\}$)
@@ -106,7 +108,7 @@ If you utilize this simulation architecture or findings in your methodological r
 
 ```bibtex
 @article{adeyemi2026repeated,
-  author    = {Adeyemi, Isaac T.},
+  author    = {Adeyemi, Isaac T. and Bamidele, D. E. and Adisa, Z. O. and Ademola, O. R.},
   title     = {Statistical Analysis of Repeated Measures Data: A Simulation Study Comparing Ordinary Least Squares, Linear Mixed-Effects, and Cluster-Robust Estimators},
   journal   = {Methodological Preprint},
   year      = {2026},

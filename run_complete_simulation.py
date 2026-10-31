@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Title: Complete Monte Carlo Simulation Engine (ADEMP Protocol, R=2000)
-Author: Isaac T. Adeyemi
+Authors: Adeyemi I. T., Bamidele D. E., Adisa Z. O., Ademola O. R.
 Institution: Ladoke Akintola University of Technology (LAUTECH)
 Description: Executes all 24 factorial scenarios across R=2,000 replications (48,000 datasets)
              with seed 20261031. Evaluates Naive OLS, CR2, and LMM.

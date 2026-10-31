@@ -1,6 +1,6 @@
 # ==============================================================================
 # Title: Statistical Analysis of Repeated Measures Data: A Simulation Study
-# Author: Isaac T. Adeyemi
+# Authors: Adeyemi I. T., Bamidele D. E., Adisa Z. O., Ademola O. R.
 # Institution: Ladoke Akintola University of Technology (LAUTECH)
 # Description: Reproducible R simulation script adhering to the ADEMP protocol
 #              and re-analysis of the Belenky et al. (2003) sleepstudy benchmark.
